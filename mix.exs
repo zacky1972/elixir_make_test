@@ -10,7 +10,7 @@ defmodule ElixirMakeTest.MixProject do
       deps: deps(),
       compilers: [:elixir_make] ++ Mix.compilers(),
       aliases: [
-        compile: ["clean", "compile", &install/1]
+        compile: ["clean", &install/1, "compile"]
       ],
       make_clean: ["clean"],
       make_args: ["-j#{:erlang.system_info(:logical_processors_available)}"]
